@@ -17,10 +17,11 @@ body {
     position: relative;
     background-image: url("/src/assets/pattern-curve.svg");
     background-size: cover;
-    // background-color: lightblue;
+    background-color: lightgrey;
 }
 
 .attribution{
-    position: absolute;
-    bottom: 0;
+    // margin-top: 3rem;
+    // position: absolute;
+    // bottom: 0;
 }

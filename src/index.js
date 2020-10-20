@@ -1,2 +1,4 @@
-import "./sass/main.scss"
-console.log("hello world")
+import { test } from "./js/logic.js"
+import "./sass/main.scss";
+
+test()
