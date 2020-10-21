@@ -1,4 +1,4 @@
-import { test } from "./js/logic.js"
+// import { test } from "./js/logic.js"
 import "./sass/main.scss";
-
-test()
+import * as Index from "./js/logic"
+// test()
