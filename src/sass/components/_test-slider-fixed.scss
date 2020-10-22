@@ -4,12 +4,13 @@
     height: 80rem;
     box-shadow: .5rem 1rem 20px lightgrey;
     overflow: hidden;
-
+    
     &__container {
         height: 100%;
         position: relative;
         background-color: green;
         display: flex;
+        transition: 400ms ease-in;
     }
     
     &__slide {

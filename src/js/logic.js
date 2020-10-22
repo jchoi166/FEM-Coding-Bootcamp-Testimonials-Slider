@@ -1,46 +1,68 @@
-const track = document.querySelector(".test-slider__container")
-const rightArrow = document.querySelector(".test-slider__nav-button--right")
-const leftArrow = document.querySelector(".test-slider__nav-button--left")
+let track = document.querySelector(".test-slider__container")
+const rightArrow = document.querySelectorAll(".test-slider__nav-button--right")
+const leftArrow = document.querySelectorAll(".test-slider__nav-button--left")
 
 // create array of slides by grabbing from dom
 let slides = Array.from(track.children)
 
 // put slides next to each other by calculating exact width 
 let slideWidth = slides[0].getBoundingClientRect().width
-console.log(slideWidth)
-
+// console.log(slideWidth)
 let setSlidePosition = (slide, index) => {
     slide.style.left = slideWidth * index + "px"
 }
-
 slides.forEach(setSlidePosition)
 
 // Move slide function 
-const moveSlide = (currentSlide, targetSlide) => {
-    currentSlide.classList.remove('current-slide')
-    targetSlide.classList.add('current-slide')
-    // console.log(currentSlide)
-}
+// const moveSlide = (currentSlide, targetSlide) => {
+//     currentSlide.classList.remove('current-slide')
+//     targetSlide.classList.add('current-slide')
+// }
 
+// Get new slides array
+const newSlideArray = () => {
+    track.style.transform = "translateX(0px)"
+    // track = document.querySelector(".test-slider__container")
+    // slides = Array.from(track.children)
+    // slides.forEach(setSlidePosition)
+
+}
 // Right Arrow Functionality
 
-rightArrow.addEventListener("click", e => {
-    console.log("button working!")
-    let currentSlide = document.querySelector(".current-slide") 
-    let targetSlide = currentSlide.nextElementSibling
+rightArrow.forEach(item => {
+    item.addEventListener("click", e => {
+        console.log("right arrow button working!")
+        // Transform track over the width of the slide
+        track.style.transform = `translateX(-${slideWidth}px)`
+        track.appendChild(track.firstElementChild)
+        // newSlideArray()
 
-    // Check to see if there is a slide to the right. If not, append previous slide to end of track
-    // if (targetSlide) {
-    //     // track.appendChild currentSlide.previousElementSibling
-    //     console.log('there is no slide')
-    // }
+        // Apply ".current-slide" class to new slide
+        // let currentSlide = track.querySelector(".current-slide") 
+        // let targetSlide = currentSlide.nextElementSibling
+        // console.log(targetSlide)
+        // moveSlide(currentSlide, targetSlide) 
+        
+        // slides.reverse()
+        console.log(track)
+        
 
-    // Transform track over the width of the slide
-    track.style.transform = `translateX(-${slideWidth}px)`
 
-    // Apply ".current-slide" class to new slide
-    moveSlide(currentSlide, targetSlide)
+
+        // Move previous slide to next slide
+        
+        
+    })
 })
+
+leftArrow.forEach(item => {
+    item.addEventListener("click", e => {
+        // console.log("left arrow button working!")
+        newSlideArray()
+    })
+})
+
+console.log("original" + slides)
 
 // Left Arrow Functionality 
 
