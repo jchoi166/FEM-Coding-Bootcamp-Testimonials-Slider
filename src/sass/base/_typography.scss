@@ -1,0 +1,23 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.test-slider {
+    
+    &__caption {
+        font-size: 3rem;
+        font-weight: 300;
+        line-height: 4.5rem;
+    }
+
+    &__signature--name {
+        font-weight: 700; 
+        font-size: 1.5rem;
+    }
+
+    &__signature--title {
+        font-weight: 500;
+        font-size: 1.5rem;
+        color: hsl(240, 18%, 77%);
+    }
+}

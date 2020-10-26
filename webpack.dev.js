@@ -8,9 +8,6 @@ module.exports = merge(common, {
         filename: "main.js",
         path: path.resolve(__dirname, "dist")
     },
-    devServer: {
-        contentBase: './dist' //speciy folder from which Webpack should serve files. Kind of like the output
-    },
     module: {
         rules: [
             {

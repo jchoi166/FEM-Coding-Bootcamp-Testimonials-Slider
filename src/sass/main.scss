@@ -1,4 +1,8 @@
-body {
-    background-color: red;
-    color: white;
-}
+@import "./abstracts/mixins";
+
+@import "./base/base";
+@import "./base/typography";
+
+// @import "./components/test-slider";
+@import "./components/test-slider-fixed";
+

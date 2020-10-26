@@ -1,0 +1,87 @@
+.test-slider {
+    position: absolute;
+    height: 75%;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px 6rem;
+    background-color: white;
+    box-shadow: .5rem 1rem 20px lightgrey;
+    
+    &__container {
+        display: flex;
+        height: 100%;
+    }
+    
+    &__slide {
+        display: flex;
+        width: 100%;
+    }
+
+    &__heading {
+        align-self: center;
+        width: 65%;
+        padding-left: 13rem;
+        z-index: 99;
+    }
+    
+    &__quote-img {
+        height: 10rem;
+        position: absolute;
+        transform: translate(10rem, -6rem)
+    }
+
+    &__signature {
+        margin-top: 1rem;
+    }
+
+    &__signature--name {
+        margin-right: .5rem;
+    }
+
+    &__photo {
+        background-image: url(/src/assets/pattern-bg.svg);
+        background-size: cover;
+        position: absolute;
+        height: 80%;
+        width: 50%;
+        right: 5rem;
+        margin: 5rem 0rem;
+        display: flex;
+        justify-content: flex-end;
+
+    }
+
+    &__photo--profile {
+        // background-color:red;
+        height: 87%;
+        margin: 3rem 7rem 0rem 0rem;
+        box-shadow: -15px 0px 20px -10px rgb(226, 226, 226);
+        border-radius: 5px;
+
+    }
+
+    &__nav {
+        display: flex;
+        position: absolute;
+        background-color: white;
+        box-shadow: 0px 5px 20px 1px rgb(150, 150, 150);
+        border-radius: 5rem;
+        bottom: 0;
+        transform: translate(-35rem, -45%)
+        // align-self: center;
+        
+    }
+
+    &__nav--left {
+        margin: 1rem 1.3rem;
+        height: 12px;
+    }
+    
+    &__nav--right {
+        margin: 1rem 1.3rem;
+        height: 12px;
+    }
+    
+
+    
+}
